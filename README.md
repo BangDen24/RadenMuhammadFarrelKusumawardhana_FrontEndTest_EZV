@@ -15,7 +15,7 @@ This is a submission for the **Frontend Developer Skill Test**. It’s a simple 
 
 git clone https://github.com/your-username/todo-skill-test.git
 
-cd todo-skill-test
+cd RadenMuhammadFarrelKusumawardhana_FrontEndTest_EZV
 
 npm install
 
