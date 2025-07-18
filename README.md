@@ -12,9 +12,13 @@ This is a submission for the **Frontend Developer Skill Test**. It’s a simple 
 ## 🛠️ Getting Started
 
 ``bash
+
 git clone https://github.com/your-username/todo-skill-test.git
+
 cd todo-skill-test
+
 npm install
+
 npm run dev
 
 ## Features
