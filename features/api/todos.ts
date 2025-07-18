@@ -19,8 +19,6 @@ export const todosApi = api.injectEndpoints({
 
 export const { useGetTodosQuery, useCreateTodoMutation } = todosApi;
 
-// fetch todo gabisa pake RTK query karena ini bukan SSR
-// jadi harus manual fetch
 
 //UseCreateTodoMutation ini untuk create itu pake RTK Query lalu di wrapper componentnya jadi csr
 // jadi parent ssr tapi child csr
