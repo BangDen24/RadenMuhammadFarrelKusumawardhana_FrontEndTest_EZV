@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Frontend Skill Test – Todo App
 
-## Getting Started
+This is a submission for the **Frontend Developer Skill Test**. It’s a simple Todo List app built with **Next.js App Router**, **RTK Query**, and **Tailwind CSS**. The project focuses on a combination of **Server-Side Rendering with ISR** and **Client-Side Revalidation using RTK Query**.
 
-First, run the development server:
+## Tech Stack
 
-```bash
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Redux Toolkit + RTK Query
+
+## 🛠️ Getting Started
+
+``bash
+git clone https://github.com/your-username/todo-skill-test.git
+cd todo-skill-test
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Server-Side Rendering + ISR (Incremental Static Regeneration)**
+- Data is fetched using fetch() on the server (app/page.tsx)
+- ISR strategy: page is pre-rendered at build time and revalidated every 10 seconds
+- SEO-friendly, so search engines can see the content
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Client-Side Data Revalidation with RTK Query**
+- After initial render, data is kept fresh using RTK Query
+- Auto-refetches every 30 seconds
+- Manual refresh button available as well
 
-## Learn More
+**Add Todo Modal**
+- Modal form for adding a new todo
+- Uses useCreateTodoMutation from RTK Query
 
-To learn more about Next.js, take a look at the following resources:
+Note: Since the API is mock (JSONPlaceholder), new todos are not persisted
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Pagination**
+- Uses query param ?page=1, ?page=2, etc.
+- Works on both server-side and client-side
+- Prev/Next buttons are auto-disabled based on condition
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made By Raden Muhammad Farrel Kusumawardhana
